@@ -198,3 +198,38 @@ running_sum(superhero_stats)
 superhero_stats = [3, 1, 2, 10, 1]
 running_sum(superhero_stats)
 
+
+"""Problem 12: Shuffle
+Write a function shuffle() that accepts a list cards of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn]. Return the list in the form [x1,y1,x2,y2,...,xn,yn].
+"""
+def shuffle(cards):
+   
+    shuffled_list = []
+    first_half_length = len(cards)//2
+
+    for i in range(first_half_length):
+        shuffled_list.append(cards[i])
+        shuffled_list.append(cards[i+first_half_length])
+    print(shuffled_list)
+
+print("Example Usage")
+
+# lst = [1,2,3,4,5,6,7,8,9,10]
+# shuffled_list = []
+# first_half_length = len(lst)//2
+
+# for i in range(first_half_length): #0,1,2,3,4
+#     shuffled_list.append(lst[i])
+#     shuffled_list.append(lst[i+first_half_length])
+# print(shuffled_list)
+
+
+
+cards = ['Joker', 'Queen', 2, 3, 'Ace', 7]
+shuffle(cards)
+
+cards = [9, 2, 3, 'Joker', 'Joker', 3, 2, 9]
+shuffle(cards)
+
+cards = [10, 10, 2, 2]
+shuffle(cards)
